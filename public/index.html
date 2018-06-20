@@ -17,6 +17,7 @@
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="/vendor/moment.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
@@ -40,21 +41,21 @@
         <span class="counter">140</span>
       </form>
     </section>
-    <section>
-    <article class="all-the-tweets">
-      <header>
-        <img class="profile" src="/images/gallery_travis-pastrana-portrait.jpg">
-        <span class="tweet-name">Travis Pastrana</span>
-        <span class="tweet-username">@MrPastrana</span>
-      </header>
-        <p class="tweet-text">Today I did some freestyle with my bike! Now I need to take a break from the competition because I broke my leg! :( I'll be back on track!</p>
-      <footer>
-        <span class="time-past">10 minutes ago</span>
-        <i class="fas fa-flag footer-icon first-icon"></i>
-         <i class="fas fa-retweet footer-icon"></i>
-         <i class="fas fa-heart footer-icon"></i>
-      </footer>
-    </article>
+    <section id="tweet-container" class="tweet-container">
+      <article class="all-the-tweets">
+        <header class="tweet-header">
+          <img class="profile" src="/images/gallery_travis-pastrana-portrait.jpg">
+          <span class="tweet-name">Travis Pastrana</span>
+          <span class="tweet-username">@MrPastrana</span>
+        </header>
+          <p class="tweet-text">Today I did some freestyle with my bike! Now I need to take a break from the competition because I broke my leg! :( I'll be back on track!</p>
+        <footer class="tweet-footer">
+          <span class="time-past">10 minutes ago</span>
+          <i class="fas fa-flag footer-icon first-icon"></i>
+           <i class="fas fa-retweet footer-icon"></i>
+           <i class="fas fa-heart footer-icon"></i>
+        </footer>
+      </article>
     </section>
     </main>
   </body>
