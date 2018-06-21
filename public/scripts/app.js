@@ -47,6 +47,13 @@ const data = [];
 
 $(document).ready(function() {
 
+    $.ajax({
+        url: '/tweets',
+        type: 'GET'
+    }).then(function(arrayOfRawTweets) {
+        renderTweets(arrayOfRawTweets);
+    });
+
     function renderTweets(tweets) {
         $('#tweet-container').empty();
         for (let tweetElement of tweets) {
@@ -109,12 +116,25 @@ $(document).ready(function() {
             $.ajax({
                 method: 'POST',
                 url: '/tweets',
-                data: $(this).serialize()
-            }).done(function(newTweet) {
+                data: $(this).serialize(),
+            }).done(function() {
                 $('#textBox').val('');
                 $('.counter').html(140);
-                tweets.push(newTweet);
-                renderTweets(tweets);
+                $.ajax({
+                    url: '/tweets',
+                    type: 'GET'
+                }).done(function(arrayOfRawTweets) {
+                    renderTweets(arrayOfRawTweets);
+                }).fail(function(error){
+                    alert('Error Message!')
+                });
+            })
+            .fail(function(a,b,c,d,e){
+              if(a.status === 500){
+                alert('Server exploded!')
+              }else if (a.status == 400){
+                alert('Server cannot find this cooresponding handler.')
+              }
             });
         }
     });
