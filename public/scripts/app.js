@@ -59,7 +59,6 @@ $(document).ready(function() {
         for (let tweetElement of tweets) {
             let $tweetElement = createTweetElement(tweetElement);
             $('#tweet-container').prepend($tweetElement);
-
         }
     };
 
@@ -114,28 +113,33 @@ $(document).ready(function() {
             alert('Your tweet must be 140 characters maximum!')
         } else {
             $.ajax({
-                method: 'POST',
-                url: '/tweets',
-                data: $(this).serialize(),
-            }).done(function() {
-                $('#textBox').val('');
-                $('.counter').html(140);
-                $.ajax({
+                    method: 'POST',
                     url: '/tweets',
-                    type: 'GET'
-                }).done(function(arrayOfRawTweets) {
-                    renderTweets(arrayOfRawTweets);
-                }).fail(function(error){
-                    alert('Error Message!')
+                    data: $(this).serialize(),
+                }).done(function() {
+                    $('#textBox').val('');
+                    $('.counter').html(140);
+                    $.ajax({
+                        url: '/tweets',
+                        type: 'GET'
+                    }).done(function(arrayOfRawTweets) {
+                        renderTweets(arrayOfRawTweets);
+                    }).fail(function(error) {
+                        alert('Error Message!')
+                    });
+                })
+                .fail(function(a, b, c, d, e) {
+                    if (a.status === 500) {
+                        alert('Server exploded!')
+                    } else if (a.status == 400) {
+                        alert('Server cannot find this cooresponding handler.')
+                    }
                 });
-            })
-            .fail(function(a,b,c,d,e){
-              if(a.status === 500){
-                alert('Server exploded!')
-              }else if (a.status == 400){
-                alert('Server cannot find this cooresponding handler.')
-              }
-            });
         }
+    });
+
+    $("input.compose-bouton").click(function() {
+        $("section.new-tweet").slideToggle(200);
+        $("textarea").focus();
     });
 });

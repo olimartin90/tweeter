@@ -22,3 +22,23 @@
 #nav-bar .header {
   font-size: 200%;
 }
+
+/*Style for Compose Bouton*/
+input.compose-bouton {
+  margin-left: 30em;
+  align-self: auto;
+  width: 7em;
+  height: 3.5em;
+  border-radius: 7px;
+  border-style: solid;
+  border: solid 1.5px black;
+  background-color: white;
+  opacity: 0.7;
+  color:#00a087;
+  font-size: larger;
+  font-weight: bold;
+}
+
+input.compose-bouton:hover {
+ opacity:1.1;
+}
