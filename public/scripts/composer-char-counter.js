@@ -1,9 +1,9 @@
 $(document).ready(function() {
 
     $("#textBox").on('keyup', function(event) {
-
-        var counterDown = 140 - $(this).val().length;
-        $('.counter').text(counterDown);
+        const maxChar = 140;
+        const counterDown = maxChar - $(this).val().length;
+        $(this).siblings('.counter').text(counterDown);
 
         if (counterDown < 0) {
             $(".counter").css("color", "red");
