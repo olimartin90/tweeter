@@ -1,3 +1,4 @@
+/*Style for the article*/
 article.all-the-tweets {
   background-color: #d3d3d34f;
   border-radius: 5px;
@@ -6,9 +7,10 @@ article.all-the-tweets {
   border-width: 2px;
   margin-left: 2em;
   margin-right: 2em;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
 
+/*Style for the header*/
 article.all-the-tweets header {
   margin-left: 10px;
   margin-right: 10px;
@@ -20,12 +22,14 @@ article.all-the-tweets header {
   opacity: 0.7;
 }
 
+/*Style for the tweet name*/
 span.tweet-name {
   margin-left: 10px;
   font-size: 20px;
   font-weight: bold;
 }
 
+/*Style for the tweet username*/
 span.tweet-username {
   margin-left: auto;
   margin-top: 7px;
@@ -33,6 +37,7 @@ span.tweet-username {
   font-style: italic;
 }
 
+/*Style for the profile picture*/
 img.profile {
   height: 75px;
   width: 75px;
@@ -42,6 +47,7 @@ img.profile {
   border-color: lightgrey;
 }
 
+/*Style for the tweet-text*/
 p.tweet-text {
   height: 120px;
   background-color: white;
@@ -53,6 +59,7 @@ p.tweet-text {
   margin-bottom: 0;
 }
 
+/*Style for the footer*/
 article.all-the-tweets footer {
   background-color: white;
   height: 45px;
@@ -62,24 +69,40 @@ article.all-the-tweets footer {
   padding: 12px;
 }
 
+/*Style for the time spent of a tweet*/
 span.time-past {
   font-size: 14px;
 }
 
+/*Style for the flag icon*/
 i.first-icon {
-  padding-left: 200px;
+  float: right;
 }
 
+/*Style for the retweet icon*/
+i.second-icon {
+  padding-left: 8px;
+  padding-right: 8px;
+  float: right;
+}
+
+/*Style for the heart*/
+i.third-icon {
+  float: right;
+}
+
+/*Style for the article-header hover*/
 article:hover header {
   opacity: 1.1;
 }
 
+/*Style for all the icons in the footer*/
 .footer-icon {
   opacity: 0;
 }
 
+/*Style for icons hover*/
 article:hover .footer-icon {
   opacity: 1.1;
   color: #00a087;
 }
-

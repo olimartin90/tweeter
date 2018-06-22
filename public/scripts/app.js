@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+  // Function to loadTweets from the server to the browser (client).
   function loadTweets () {
     $.ajax({
       url: '/tweets',
@@ -13,14 +14,16 @@ $(document).ready(function() {
     });
   };
 
+    // Function to populate the tweet-container (html).
     function renderTweets(tweets) {
         $('#tweet-container').empty();
         for (let tweetElement of tweets) {
             let $tweetElement = createTweetElement(tweetElement);
             $('#tweet-container').prepend($tweetElement);
-        }
+        };
     };
 
+    // Function to create the tweet element, the format of the article (html).
     function createTweetElement(tweet) {
 
         let $article = $('<article>')
@@ -56,10 +59,10 @@ $(document).ready(function() {
                             .addClass('fas fa-flag footer-icon first-icon');
 
         let $secondIcon = $('<i>')
-                            .addClass('fas fa-retweet footer-icon');
+                            .addClass('fas fa-retweet footer-icon second-icon');
 
         let $thirdIcon = $('<i>')
-                            .addClass('fas fa-heart footer-icon');
+                            .addClass('fas fa-heart footer-icon third-icon');
 
         $article.append($header);
         $header.append($img);
@@ -68,16 +71,16 @@ $(document).ready(function() {
         $article.append($p);
         $article.append($footer);
         $footer.append($spanTime);
-        $footer.append($firstIcon);
-        $footer.append($secondIcon);
         $footer.append($thirdIcon);
+        $footer.append($secondIcon);
+        $footer.append($firstIcon);
 
         return $article;
 
     };
 
+    // Verification conditions when submitting a tweet.
     $('#textForm').submit(function(event) {
-
         event.preventDefault();
         if ($('#textBox').val().length === 0) {
             alert('You cannot tweet nothing!')
@@ -94,10 +97,11 @@ $(document).ready(function() {
               $('.counter').html(140);
               loadTweets();
             });
-        }
+        };
     });
 
-    $("input.compose-bouton").click(function() {
+    // Compose Button to toggle down the textbox and then get the textarea to tweet a message.
+    $("input.compose-button").click(function() {
         $("section.new-tweet").slideToggle(200);
         $("textarea").focus();
     });

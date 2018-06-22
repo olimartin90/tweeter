@@ -1,7 +1,9 @@
+/*Style for the main container*/
 main.container {
   display: flex;
 }
 
+/*Style for the section post a tweet*/
 section.new-tweet {
 background-color: #d3d3d34f;
 padding-left: 2em;
@@ -12,12 +14,15 @@ border-color: #8080805c;
 border-width: 2px;
 margin-left: 2em;
 margin-right: 2em;
-margin-bottom: 80px;
+margin-bottom: 60px;
 }
 
+/*Style for the heading for a new tweet*/
 section.new-tweet h2 {
 border-bottom: 1px solid;
 }
+
+/*Style for the form of a new tweet*/
 section.new-tweet form {
 display: flex;
 flex-wrap: wrap;
@@ -25,9 +30,9 @@ justify-content: space-between;
 margin-bottom: 10px;
 }
 
+/*Style for the textarea of the new tweet*/
 section.new-tweet form textarea {
   width: 100%;
   padding: 5px;
   margin-bottom: 8px;
 }
-

@@ -1,4 +1,4 @@
-/*Style for Nav-Bar*/
+/*Style for the Nav-Bar*/
 #nav-bar {
   top: fixed;
   height: 80px;
@@ -11,22 +11,23 @@
   align-items: center;
 }
 
-/*Style for Logo - Image*/
+/*Style for the Logo*/
 #nav-bar .logo {
   width: 80px;
   height: 80px;
   margin-right: 10px;
 }
 
-/*Style for Header*/
+/*Style for the Header*/
 #nav-bar .header {
   font-size: 200%;
+  display: inline-block;
 }
 
-/*Style for Compose Bouton*/
-input.compose-bouton {
-  margin-left: 30em;
-  align-self: auto;
+/*Style for the Compose Button*/
+input.compose-button {
+  margin-left: 40.5%;
+  order: 10;
   width: 7em;
   height: 3.5em;
   border-radius: 7px;
@@ -39,6 +40,7 @@ input.compose-bouton {
   font-weight: bold;
 }
 
-input.compose-bouton:hover {
+/*Style for button-hover*/
+input.compose-button:hover {
  opacity:1.1;
 }
