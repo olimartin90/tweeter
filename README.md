@@ -21,3 +21,11 @@ This repository is the starter code for the project: Devs will fork and clone th
 - Moment
 - MongoDB
 - Nodemon
+
+## Screenshots
+
+!["Screenshot of about to tweet - textbox"](https://github.com/olimartin90/tweeter/blob/master/docs/tweeter-about-to-tweet.png?raw=true)
+!["Screenshot of compose button - toggle"](https://github.com/olimartin90/tweeter/blob/master/docs/tweeter-compose-button-toggle-down.png?raw=true)
+!["Screenshot of error message - over 140 characters"](https://github.com/olimartin90/tweeter/blob/master/docs/tweeter-error-message-more-140-characters.png?raw=true)
+!["Screenshot of error message - no character"](https://github.com/olimartin90/tweeter/blob/master/docs/tweeter-error-message-no-character.png?raw=true)
+!["Screenshot of a tweet post - posts feed"](https://github.com/olimartin90/tweeter/blob/master/docs/tweeter-tweet-post.png?raw=true)
